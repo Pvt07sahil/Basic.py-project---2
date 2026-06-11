@@ -1,17 +1,20 @@
 # Basic.py-project---2
+'''In this program we gonna ask the user , is he happy or not ? once he attempt the yes/no tracy will draw a emoji as per his repond.'''
 
+
+#If user said Yes then it create a smile 
 def draw_smile():
     draw_circle()
     draw_eyes()
     draw_mouth("smile")
     
-    
+#If user said No then it create a frown 
 def draw_frown():    
     draw_circle()
     draw_eyes()
     draw_mouth("frown")
 
-
+#The emoji yellow structure 
 def draw_circle():
     penup()
     setposition(0,-100)
@@ -20,7 +23,8 @@ def draw_circle():
     color("yellow")
     circle(100)
     end_fill()
-    
+
+#Emoji eyes    
 def draw_eyes():
     penup()
     setposition(-25,25)
@@ -34,7 +38,8 @@ def draw_eyes():
     color("black")
     circle(10)
     end_fill()
-    
+ 
+#Emoji smile or frown as per user command 
 def draw_mouth(type):
     if type == "smile" :
         penup()
@@ -53,7 +58,7 @@ def draw_mouth(type):
         circle(50,180)
     
     
-
+#The main code 
 speed(10)
 
 happy = input("Are you happy?")
